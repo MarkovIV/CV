@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: var(--color-black);
+	background-color: var(--color-gray);
+
+	--color-black: #24292f;
+	--color-blue: #218bff;
+	--color-white: #ffffff;
+	--color-gray: #f6f8fa;
+	--color-gray-1: #eaeef2;
+	--color-gray-2: #d0d7de;
+	--max-width: 750px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all .2s;	
+}
+
+a:hover {
+	cursor: pointer;
+	color: var(--color-blue);
+}
+
+.navbar {
+	background-color: var(--color-blue);
+	color: var(--color-white);
+	height: 40px;	
+	max-width: var(--max-width);
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: grid;
+	grid-template-columns: auto 200px;
+	gap: 10px;
+	grid-template-areas:
+		"links navbarPics";
+}
+
+.navbar a {
+	padding-right: 10px;
+}
+
+.navbar a:hover {
+	cursor: pointer;
+	color: var(--color-black);
+}
+
+.navbar a:last-child {
+	padding-right: 0;
+}
+
+.navbarPics {
+	justify-self: right;
+}
+
+.navbarPics img {
+	width: 20px;
+	transition: all .2s;
+}
+
+.navbarPics img:hover {
+	width: 25px;
+}
+
+.header {
+	max-width: var(--max-width);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	margin-top: 50px;
+	display: flex;
+}
+
+.avatarPic {
+	border-radius: 5px;
+	width: 150px;
+	display: block;
+	margin-top: 50px;
+	box-shadow: 4px 4px 14px rgba(0, 0, 0, .25);
+}
+
+.applicant {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.applicant .desiredPosition {
+	margin-top: 20px;
+}
+
+.applicant .schedule {
+	margin-top: 10px;
+	font-style: italic;
+	font-size: 0.8rem;
+}
+
+.applicant .contacts {
+	margin-top: 40px;
+	padding-left: 10px;
+	border-left: 1px solid var(--color-gray-2);
+}
+
+.section {	
+	background-color: var(--color-gray-1);
+	border-radius: 3%;
+	max-width: var(--max-width);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 14px rgba(0, 0, 0, .25);
+}
+
+.sectionName {
+	padding: 10px;
+}
+
+.section article {
+	padding: 10px;
+}
+
+.about ul {
+	padding-left: 20px;
+}
+
+.workCard .period {
+	font-style: italic;
+	padding-top: 10px;
+}
+
+.companyDescription,
+.location {
+	font-size: 0.7rem;
+}
+
+.workMainData .role {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.workCard {
+	display: grid;
+	grid-template-columns: 200px auto;
+	gap: 10px;
+	grid-template-areas:
+		"workMainData experience";
+}
+
+.workMainData {
+	border-top: 1px solid var(--color-gray-2);
+	border-right: 1px solid var(--color-gray-2);
+	
+}
+
+.eduData {
+	border-left: 1px solid var(--color-gray-2);
+	padding-left: 10px;
+}
+
+.education .period {
+	font-style: italic;
+}
+
+.formMessage input,
+.formMessage textarea {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	outline: none;
+	font-family: inherit;
+	color: inherit;
+	margin-bottom: 10px;
+}
+
+.formMessage textarea {
+	width: 100%;
+	height: 70px;
+	resize: none;
+}
+
+.btn {
+	color: inherit;
+	font-family: inherit;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+@media (max-width: 690px) {
+	.header {
+		display: block;
+	}
+
+	.avatarPic {
+		display: block;
+		margin: auto;
+	}
+
+	.applicant {
+		margin-top: 20px;
+		padding-left: 140px;
+	}
+
+	.navbarPics {
+		opacity: 0;
+	}
+
+	.navbar {
+		font-size: 0.8rem;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"links";
+	}
+}
+
+
