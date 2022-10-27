@@ -88,7 +88,7 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 40px;
-	margin-top: 50px;
+	padding-top: 50px;
 	display: flex;
 }
 
@@ -208,6 +208,7 @@ a:hover {
 @media (max-width: 690px) {
 	.header {
 		display: block;
+		padding-top: 50px;
 	}
 
 	.avatarPic {
@@ -216,8 +217,21 @@ a:hover {
 	}
 
 	.applicant {
-		margin-top: 20px;
-		padding-left: 140px;
+		margin-top: 20px;		
+	}
+
+	.applicant .name,
+	.applicant .desiredPosition,
+	.applicant .schedule {
+		text-align: center;
+	}
+
+	.applicant .contacts {
+		margin: auto;
+	}
+
+	.applicant .candidate {
+		padding-bottom: 20px;
 	}
 
 	.navbarPics {
@@ -225,10 +239,15 @@ a:hover {
 	}
 
 	.navbar {
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		grid-template-columns: auto;
 		grid-template-areas:
-			"links";
+			"links"
+			"navbarPics";
+	}
+
+	.navbar a {
+		padding-right: 5px;
 	}
 }
 
